@@ -1,0 +1,28 @@
+theme = "papercolor-dark"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+space.c = "toggle_comments"
+D = "kill_to_line_end"
+
+[editor]
+line-number = "relative"
+color-modes = true
+auto-save = true
+rulers = [120]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
