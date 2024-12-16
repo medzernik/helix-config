@@ -1,4 +1,4 @@
-theme = "papercolor-dark"
+theme = "noctis"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,11 +13,36 @@ D = "kill_to_line_end"
 [editor]
 line-number = "relative"
 color-modes = true
-auto-save = true
+true-color = true
 rulers = [120]
+completion-timeout = 5
+completion-trigger-len = 0
+popup-border = "all"
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error" # show errors on the cursorline inline
+# other-lines = "warning"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["version-control"]
+right = ["register" ,"diagnostics", "selections", "position", "file-encoding", "total-line-numbers", "file-line-ending", "file-type", "file-encoding"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 [editor.lsp]
 display-inlay-hints = true
+display-messages = true
 
 [editor.indent-guides]
 render = true
