@@ -19,6 +19,7 @@ completion-timeout = 5
 completion-trigger-len = 0
 popup-border = "all"
 end-of-line-diagnostics = "hint"
+bufferline = "always"
 
 [editor.inline-diagnostics]
 cursor-line = "error" # show errors on the cursorline inline
