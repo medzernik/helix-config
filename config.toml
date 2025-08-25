@@ -1,4 +1,4 @@
-theme = "noctis"
+theme = "onelight"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -7,7 +7,6 @@ select = "underline"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
-space.c = "toggle_comments"
 D = "kill_to_line_end"
 
 [editor]
@@ -17,9 +16,9 @@ true-color = true
 rulers = [120]
 completion-timeout = 5
 completion-trigger-len = 0
-popup-border = "all"
 end-of-line-diagnostics = "hint"
 bufferline = "always"
+default-line-ending = "lf"
 
 [editor.inline-diagnostics]
 cursor-line = "error" # show errors on the cursorline inline
@@ -28,7 +27,59 @@ cursor-line = "error" # show errors on the cursorline inline
 [editor.statusline]
 left = ["mode", "spinner", "file-name"]
 center = ["version-control"]
-right = ["register" ,"diagnostics", "selections", "position", "file-encoding", "total-line-numbers", "file-line-ending", "file-type", "file-encoding"]
+right = ["register" ,"diagnostics", "selections", "position", "total-line-numbers", "file-line-ending", "file-type", "file-encoding"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+theme = "onelight"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+D = "kill_to_line_end"
+
+[editor]
+line-number = "relative"
+color-modes = true
+true-color = true
+rulers = [120]
+completion-timeout = 5
+completion-trigger-len = 0
+end-of-line-diagnostics = "hint"
+bufferline = "always"
+default-line-ending = "lf"
+
+[editor.inline-diagnostics]
+cursor-line = "error" # show errors on the cursorline inline
+# other-lines = "warning"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["version-control"]
+right = ["register" ,"diagnostics", "selections", "position", "total-line-numbers", "file-line-ending", "file-type", "file-encoding"]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
