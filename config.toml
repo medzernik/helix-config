@@ -8,7 +8,6 @@ select = "underline"
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 D = "kill_to_line_end"
-C-g = [":new", ":insert-output gitui", ":buffer-close!", ":redraw"]
 
 [editor]
 line-number = "relative"
